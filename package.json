@@ -1,0 +1,48 @@
+{
+  "name": "@tater-archives/react-use-peer-state",
+  "version": "1.0.0",
+  "description": "React hook to store state with PeerJS",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosiahFu/react-use-peer-state"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "peerjs",
+    "multiplayer",
+    "utility"
+  ],
+  "author": "Josiah Fu josiahfu@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "peerjs": "^1.5.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
