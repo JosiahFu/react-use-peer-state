@@ -1,6 +1,6 @@
 {
   "name": "@tater-archives/react-use-peer-state",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React hook to store state with PeerJS",
   "type": "module",
   "main": "dist/cjs/index.js",
