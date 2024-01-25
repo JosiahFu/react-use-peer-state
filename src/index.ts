@@ -97,6 +97,7 @@ function useHostState<T>(identifier: string | undefined, initialState?: T) {
 
             connection.on('error', error => {
                 alert(`An error occurred: ${error.type}`)
+                console.error('PeerJS Connection error:\n' + error);
             })
         });
 
@@ -111,7 +112,15 @@ function useHostState<T>(identifier: string | undefined, initialState?: T) {
 
     const handleSetState = (value: T) => {
         setState(value);
-        connections.forEach(e => e.send(value));
+        connections.forEach(conn => {
+            if (conn.open) {
+                conn.send(value)
+            } else {
+                conn.on('open', () => {
+                    conn.send(value);
+                })
+            }
+        });
     }
 
     return [state, handleSetState, id, connections.length];
